@@ -19,6 +19,7 @@ function MoviesCard({ Movies, FilterName, Rating }) {
               width: "16.2rem",
               color: "black",
               backgroundColor: "rgb(184, 190, 190)",
+              index:"-1",
             }}
           >
             <Card.Body>

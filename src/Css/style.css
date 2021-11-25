@@ -4,10 +4,6 @@ body {
 
 /*NavBar*/
 
-.home-page{
-    position: sticky;
-    top: 0;
-}
 .title-navig {
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -18,6 +14,9 @@ body {
 }
 
 /*SearchBar*/
+.search-mov{
+  margin-top: 40px;
+}
 
 .search-mov {
     display: flex;
@@ -74,6 +73,12 @@ body {
  font-style:italic;
  font-weight:bold;
 text-shadow: #687c4a 1px 1px 4px;
+}
+
+.reactstar {
+  display: flex;
+  justify-content: center;
+  
 }
 
 /*Btn-ADD*/

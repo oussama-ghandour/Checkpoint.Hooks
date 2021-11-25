@@ -6,7 +6,7 @@ function Home(Movies, setMovies) {
   return (
     <div className="home-page">
       <>
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" fixed="top">
           <Container>
             <Navbar.Brand className="title-navig" href="#home">
               Disney Classic Movies

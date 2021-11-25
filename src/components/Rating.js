@@ -7,16 +7,18 @@ function Rating({ setRating }) {
   };
 
   return (
-    <ReactStars
-      count={5}
-      onChange={RatingChanged}
-      size={24}
-      isHalf={true}
-      emptyIcon={<i className="far fa-star"></i>}
-      halfIcon={<i className="fa fa-star-half-alt"></i>}
-      fullIcon={<i className="fa fa-star"></i>}
-      activeColor="#ffd700"
-    />
+    <div className="reactstar">
+      <ReactStars
+        count={5}
+        onChange={RatingChanged}
+        size={24}
+        isHalf={true}
+        emptyIcon={<i className="far fa-star"></i>}
+        halfIcon={<i className="fa fa-star-half-alt"></i>}
+        fullIcon={<i className="fa fa-star"></i>}
+        activeColor="#ffd700"
+      />
+    </div>
   );
 }
 export default Rating;
