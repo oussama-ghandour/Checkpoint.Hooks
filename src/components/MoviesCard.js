@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactStars from "react-rating-stars-component";
+import { Link } from "react-router-dom";
 
 function MoviesCard({ Movies, FilterName, Rating }) {
   return (
@@ -10,8 +11,7 @@ function MoviesCard({ Movies, FilterName, Rating }) {
         (el) =>
           el.title.toUpperCase().includes(FilterName.toUpperCase()) &&
           el.rating >= Rating
-      )
-      .map((el) => (
+      ).map((el) => (
         <div className="movies-col">
           <img src={el.postUrl} />
           <Card
@@ -19,7 +19,7 @@ function MoviesCard({ Movies, FilterName, Rating }) {
               width: "16.2rem",
               color: "black",
               backgroundColor: "rgb(184, 190, 190)",
-              index:"-1",
+              index: "-1",
             }}
           >
             <Card.Body>
@@ -28,6 +28,11 @@ function MoviesCard({ Movies, FilterName, Rating }) {
               </Card.Title>
               <Card.Text>
                 <h2>{el.description}</h2>
+              </Card.Text>
+              <Card.Text>
+                <Link to={`/Trailer/${el.id}`}>
+                  <button class="button-54" role="button">Trailer</button>
+                </Link>
               </Card.Text>
             </Card.Body>
           </Card>

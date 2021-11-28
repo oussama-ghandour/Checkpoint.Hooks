@@ -15,7 +15,8 @@ function Add({ movies, setMovies }) {
 
   return (
     <>
-      <Button className="btn-add" variant="primary" onClick={handleShow}>
+      
+      <Button className="button-56" role="button" variant="primary" onClick={handleShow}>
         You Want To Add Something{" "}
       </Button>
 

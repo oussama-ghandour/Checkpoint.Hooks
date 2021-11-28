@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import Add from "./Add";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from 'react-router-dom'
 function Home(Movies, setMovies) {
   return (
     <div className="home-page">
@@ -12,8 +13,8 @@ function Home(Movies, setMovies) {
               Disney Classic Movies
             </Navbar.Brand>
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <NavDropdown title="Movies" id="basic-nav-dropdown">
+              <Nav.Link as={Link} to='/'>Home</Nav.Link>
+              <NavDropdown as={Link} to='/movies' title="Movies" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Fantasy</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Musical</NavDropdown.Item>
@@ -21,10 +22,10 @@ function Home(Movies, setMovies) {
                 <NavDropdown.Item href="#action/3.3">Comedy</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
-                  <Add Movies="movies" setMovies="setMovies" />
+                  <Add className Movies="movies" setMovies="setMovies" />
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#contact">Contact Us</Nav.Link>
+              <Nav.Link href="#contact">About Us</Nav.Link>
             </Nav>
             <Add Movies="movies" setMovies="setMovies" />
           </Container>

@@ -1,23 +1,23 @@
-
-
-
 import React from "react";
+import { Form } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Contact() {
   return (
-    <div>
-      <section id="contact">
-        <h2 className="text-important">Contact Us</h2>
-        <form>
-          <label>Full Name</label>
-          <input type="text" placeholder="Text" />
-          <label>Email</label>
-          <input type="email" placeholder="Email" />
-          <label>Message</label>
-          <textarea rows="5" cols="40"></textarea>
-          <button>Send</button>
-        </form>
-      </section>
+    <div className="contact">
+      <h2 className="text-important">Contact Us</h2> 
+      <Form > 
+        <h1 className="titleName">Full Name</h1>
+        <Form.Control type="text" placeholder="Please enter your name" />
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="name@example.com" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Message</Form.Label>
+          <Form.Control as="textarea" rows={3} />
+        </Form.Group>
+      </Form>
     </div>
   );
 }
